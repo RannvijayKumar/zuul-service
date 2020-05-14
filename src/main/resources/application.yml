@@ -1,0 +1,20 @@
+
+zuul:
+  sensitive-headers: Cookie, Set-Cookie
+  routes:
+    profile:
+      path: /profile/**
+      url: "http://localhost:9003/profile/"
+    login:
+      path: /login/**
+      serviceId: login
+    property:
+      path: /property/**
+      serviceId : property 
+    buyorsell:
+      path: /buyorsell/*
+      serviceId: buyorsell
+    analysis:
+      path: /analysis/*
+      serviceId: analysis
+      
